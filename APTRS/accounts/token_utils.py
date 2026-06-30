@@ -170,11 +170,11 @@ def send_token_email(user, token_type='invitation'):
         if token_type == 'invitation':
             url_path = f"{base_url}/set-password/{token}"
             template_name = 'email/customer-invitation.html'
-            subject = f"Invitation to join APTRS - {user.company.name if user.company else 'Your Organization'}"
+            subject = f"Invitation to join PentestProject Portal - {user.company.name if user.company else 'Your Organization'}"
         else:  # password_reset
             url_path = f"{base_url}/reset-password/{token}"
             template_name = 'email/password-reset.html'
-            subject = "Reset Your APTRS Password"
+            subject = "Reset Your PentestProject Portal Password"
 
         # Prepare email context
         context = {

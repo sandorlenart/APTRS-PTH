@@ -5,13 +5,13 @@ from customers.models import Company
 from configapi.models import ReportStandard, ProjectType
 from django.core.management.base import BaseCommand
 
-USERNAME = "Sourav.Kalal"
-EMAIL = "sourav.kalal@aptrs.com"
-FullName = "Sourav Kalal"
-Number = "+919910000001"
-Position = "Security Engineer"
+USERNAME = "slenart"
+EMAIL = "sandor.lenart@pentest-hub.com"
+FullName = "Sandor Lenart"
+Number = "+40740405468"
+Position = "Offensive Security"
 PASSWORD = "I-am-Weak-Password-Please-Change-Me"
-COMPANY_NAME = "APTRS PVT"
+COMPANY_NAME = "PenTest Hub"
 
 Required_Permissions = [
   "Manage Users",

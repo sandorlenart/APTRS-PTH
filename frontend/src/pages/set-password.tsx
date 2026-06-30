@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { validateInvitationToken, acceptInvitation } from '../lib/data/api';
 import { PasswordDescription, validPassword } from '../components/passwordValidator';
+import companyLogo from '../assets/PTH-layout/PenTestProject-Logo-white.png';
 
 const SetPassword: React.FC = () => {
   const { token } = useParams<{ token: string }>();
@@ -109,16 +110,10 @@ const SetPassword: React.FC = () => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen w-full px-4 py-6">
       <div className="w-full max-w-md p-8 mx-auto rounded-lg shadow-lg bg-white dark:bg-gray-800">
-        <div className="flex justify-center mb-6">
-          <img 
-            src="/assets/PenTestProject-Logo-white-DJrr2Mfv.png" 
-            alt="PentestProject Logo" 
-            className="h-12" 
-            onError={(e) => {
-              // Fallback if logo doesn't exist
-              e.currentTarget.style.display = 'none';
-            }} 
-          />
+        <div className="justify-center mb-6">
+          <div className="logo-container-pth shadow-xl">
+            <img src={companyLogo} alt="PenTestProject Logo" className="h-16 mx-auto" />
+          </div>
         </div>
         
         {error ? (
@@ -158,7 +153,7 @@ const SetPassword: React.FC = () => {
                     <span className="font-bold dark:text-white">Welcome, {userData.full_name || userData.email}!</span>
                   </p>
                   <p className="text-gray-600 dark:text-gray-400 text-center mt-2">
-                    You've been invited to join APTRS
+                    You've been invited to join PentestProject Portal
                     {userData.company ? ` for ${userData.company}` : ''}.
                   </p>
                 </>
