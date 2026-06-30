@@ -111,8 +111,8 @@ const SetPassword: React.FC = () => {
       <div className="w-full max-w-md p-8 mx-auto rounded-lg shadow-lg bg-white dark:bg-gray-800">
         <div className="flex justify-center mb-6">
           <img 
-            src="/logo.svg" 
-            alt="APTRS Logo" 
+            src={companyLogo} 
+            alt="PentestProject Logo" 
             className="h-12" 
             onError={(e) => {
               // Fallback if logo doesn't exist

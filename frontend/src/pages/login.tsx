@@ -103,8 +103,10 @@ const Login: React.FC<LoginProps> = ({ onSuccess }) => {
     <AuthLayout>
       <div className="flex flex-col w-full">
         <div className="mb-8 text-center">
-          <img src={companyLogo} alt="PenTest Project Logo" className="h-16 mx-auto mb-3" />
-          <p className="text-gray-600 dark:text-gray-300 mt-1">Client Portal for Security Assessment Reports</p>
+            <div className="logo-container-pth shadow-xl">
+              <img src={companyLogo} alt="PenTestProject Logo" className="h-16 mx-auto" />
+            </div>
+          <p className="text-gray-600 dark:text-gray-300 mt-2-pth">Client Portal for Security Assessment Reports</p>
         </div>
         
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden">

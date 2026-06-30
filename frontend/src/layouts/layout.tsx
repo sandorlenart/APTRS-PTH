@@ -34,16 +34,16 @@ const Layout: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.classList.add('dark');
-      setTheme('dark');
-      const editors = document.querySelectorAll('.ck');
-      editors.forEach(editor => {
-        editor.classList.add('custom-ckeditor-dark');
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  //     document.documentElement.classList.add('dark');
+  //     setTheme('dark');
+  //     const editors = document.querySelectorAll('.ck');
+  //     editors.forEach(editor => {
+  //       editor.classList.add('custom-ckeditor-dark');
+  //     });
+  //   }
+  // }, []);
 
   const [currentUser, setCurrentUser] = useState<LoginUser | null>(getAuthUser());
   const location = useLocation();
