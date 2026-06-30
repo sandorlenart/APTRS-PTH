@@ -6,6 +6,7 @@ import {
   LockClosedIcon,
   ShieldCheckIcon
 } from '@heroicons/react/24/outline';
+import companyLogo from '../assets/PTH-layout/PenTestProject-Logo-white.png';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from '../components/button'
 import { login, requestPasswordReset } from '../lib/data/api';
@@ -102,9 +103,8 @@ const Login: React.FC<LoginProps> = ({ onSuccess }) => {
     <AuthLayout>
       <div className="flex flex-col w-full">
         <div className="mb-8 text-center">
-          <ShieldCheckIcon className="h-16 w-16 mx-auto mb-3 text-primary" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">APTRS</h1>
-          <p className="text-gray-600 dark:text-gray-300 mt-1">Automated Penetration Test Reporting System</p>
+          <img src={companyLogo} alt="PenTest Project Logo" className="h-16 mx-auto mb-3" />
+          <p className="text-gray-600 dark:text-gray-300 mt-1">Client Portal for Security Assessment Reports</p>
         </div>
         
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden">
@@ -276,7 +276,7 @@ const Login: React.FC<LoginProps> = ({ onSuccess }) => {
         </div>
         
         <p className="mt-6 text-center text-sm text-gray-600 dark:text-gray-400">
-          APTRS &copy; {new Date().getFullYear()} - All rights reserved
+          PentestProject &copy; {new Date().getFullYear()} - All rights reserved
         </p>
       </div>
     </AuthLayout>

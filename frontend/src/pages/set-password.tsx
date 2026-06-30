@@ -252,7 +252,7 @@ const SetPassword: React.FC = () => {
         )}
 
         <div className="mt-8 pt-4 text-center text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700">
-          <p>© {new Date().getFullYear()} APTRS. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} PentestProject. All rights reserved.</p>
         </div>
       </div>
     </div>
