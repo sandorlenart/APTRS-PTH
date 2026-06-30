@@ -1,6 +1,5 @@
 services:
 
-
   nginx:
     build:
       context: .
@@ -16,7 +15,8 @@ services:
     depends_on:
       - aptrs
     networks:
-        - aptrs
+      aptrs:
+        ipv4_address: 172.18.0.5
 
   postgres:
     image: "postgres:latest"
@@ -39,7 +39,6 @@ services:
       timeout: 5s
       retries: 5
 
-
   cache:
     image: redis:6.2-alpine
     restart: always
@@ -55,7 +54,6 @@ services:
       test: ["CMD", "redis-cli","ping"]
     volumes:
       - cache:/data
-
 
   aptrs:
     image: ghcr.io/aptrs/aptrs:latest
@@ -90,7 +88,6 @@ services:
     depends_on:
       - postgres
       - cache
-
     build:
         context: .
         dockerfile: docker/Dockerfile_API
@@ -111,15 +108,14 @@ services:
       - "postgres"
       - "cache"
 
-
 networks:
   aptrs:
-
-
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
 
 volumes:
   static_volume:
   media_volume:
   cache:
-
-
