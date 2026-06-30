@@ -111,7 +111,7 @@ const SetPassword: React.FC = () => {
       <div className="w-full max-w-md p-8 mx-auto rounded-lg shadow-lg bg-white dark:bg-gray-800">
         <div className="flex justify-center mb-6">
           <img 
-            src={companyLogo} 
+            src="/assets/PenTestProject-Logo-white-DJrr2Mfv.png" 
             alt="PentestProject Logo" 
             className="h-12" 
             onError={(e) => {
